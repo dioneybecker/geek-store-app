@@ -1,0 +1,31 @@
+<!-- <ul>
+    <app-produto *ngFor="let p of produtos" [produto]="p"></app-produto>
+</ul> -->
+<div class="container-md">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Fabricante</th>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Garantia</th>
+                <th scope="col">Plataforma</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of produtos; let i = index" >
+                <!-- <th scope="row">{{i}}</th> -->
+                <td><img [src]="p?.imageUrl" /></td>
+                <td><a [routerLink]="'' + p?.id">{{p.nome}}</a></td>
+                <td>{{p.descricao}}</td>
+                <td>{{p.fabricante}}</td>
+                <td>{{p.plataforma}}</td>
+                <td>{{p.garantia}}</td>
+                <td>{{p.plataforma}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,34 @@
+<div class="container-md">
+    <form [formGroup]="formCliente" (submit)="salvarCliente()">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="nome" class="form-control" id="nome" formControlName="nome">
+        </div>
+        <div class="mb-3">
+            <label for="rg" class="form-label">RG</label>
+            <input type="rg" class="form-control" id="rg" formControlName="rg">
+        </div>
+        <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="cpf" class="form-control" id="cpf" formControlName="cpf" >
+        </div>
+        <div class="mb-3">
+            <label for="dataCadastro" class="form-label">Data Cadastro</label>
+            <input read-only type="dataCadastro" class="form-control" id="dataCadastro" formControlName="dataCadastro">
+        </div>
+        <div class="mb-3">
+            <label for="endereco" class="form-label">Endereco</label>
+            <input type="endereco" class="form-control" id="endereco" formControlName="endereco">
+        </div>
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="telefone" class="form-control" id="telefone" formControlName="telefone" >
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+</div>
+

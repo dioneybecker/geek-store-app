@@ -1,0 +1,27 @@
+<!-- <ul>
+    <app-cliente *ngFor="let c of clientes" [cliente]="c"></app-cliente>
+</ul> -->
+<div class="container-md">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">CPF</th>
+                <th scope="col">RG</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of clientes; let i = index" >
+                <th scope="row">{{i}}</th>
+                <td><a [routerLink]="'' + c?.id">{{c.nome}}</a></td>
+                <td>{{c.cpf}}</td>
+                <td>{{c.rg}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.telefone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

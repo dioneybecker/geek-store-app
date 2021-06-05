@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    <div class="preview-pic tab-content">
+                      <div class="tab-pane active" id="pic-1"><img src={{produto?.imageUrl}} /></div>
+                    </div>
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="nome">{{produto?.nome}}</h3>
+                    <p class="descricao">{{produto?.desc}}</p>
+                    <p class="preco">Preço: <span>{{produto?.valor}}</span></p>
+                
+                    <p class="categoria">Categoria: {{produto?.categoria}}</p>
+                    <p class="fabricante">Fabricante: {{produto?.fabricante}}</p>
+                    <p class="quantidade">Quantidate: {{produto?.quantidade}}</p>
+
+                    <div class="buttons">
+                        <!-- <button class="btn btn-primary" type="button">Adiocionar ao Carrinho</button> -->
+                        <button class="btn btn-secondary" type="button" (click)="editar()">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+
+<div class="container-md">
+    
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="nome" class="form-control" id="nome" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="categoria" class="form-label">Categoria</label>
+        <select class="form-select" aria-label="Categoria" id="categoria">
+            <option selected></option>
+            <option value="jogos">Jogos</option>
+            <option value="acessorios">Acessorios</option>
+            <option value="geek">Geek</option>
+          </select>
+        
+    </div>
+    <div class="mb-3">
+        <label for="fabricante" class="form-label">Fabricante</label>
+        <input type="fabricante" class="form-control" id="fabricante" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="quantidade" class="form-label">Quantidate</label>
+        <input type="quantidade" class="form-control" id="quantidade" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="valor" class="form-label">Valor</label>
+        <input type="valor" class="form-control" id="valor" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="plataforma" class="form-label">Plataforma</label>
+        <input type="plataforma" class="form-control" id="plataforma" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="prazoGarantia" class="form-label">Prazo Garantia</label>
+        <input type="prazoGarantia" class="form-control" id="prazoGarantia" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</div> -->
+  

@@ -1,0 +1,43 @@
+<div class="container-md">
+    
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    <h3 class="nome">{{cliente?.nome}}</h3>
+                    <p class="endereco">Endereço: <span>{{cliente?.endereco}}</span></p>
+                    <p class="telefone">Telefone: <span>{{cliente?.telefone}}</span></p>
+                    <p class="email">Email: <span>{{cliente?.email}}</span></p>
+                </div>
+                <div class="details col-md-6">
+                    <h5 class="rg">RG: {{cliente?.rg}}</h5>
+                    <h5 class="cpf">CPF: {{cliente?.cpf}}</h5>
+                    <div class="buttons">
+                        <button class="btn btn-primary" type="button" (click)="novoPedido()">Criar Pedido</button>
+                        <button class="btn btn-secondary" type="button" (click)="editar()">Editar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of cliente?.pedidos; let i = index">
+                            <th scope="row">{{i}}</th>
+                            <td>{{p.id}}</td>
+                            <td>{{p.dataVenda}}</td>
+                            <td>{{p.valor}}</td>
+                            <td>{{p.status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+</div>

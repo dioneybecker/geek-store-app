@@ -1,0 +1,89 @@
+<div class="container-md">
+    <form>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <!-- TODO: adicionar imagem ao cadastro de clientes -->
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid" alt="user" />
+                        </div>
+                        <div class="col-md-7">
+                            <h5 >{{ cliente?.nome }}</h5>
+                            <p>{{cliente?.email}}</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="p-1">RG :</th>
+                                        <td class="p-1">{{cliente?.rg}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="p-1">CPF :</th>
+                                        <td class="p-1">{{cliente?.cpf}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="p-2">Endereço :</th>
+                                        <td class="p-2">{{cliente?.endereco}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="col-md-4">
+                <div class="card">
+                    <h5 class="card-header">
+                        Total
+                    </h5>
+                    <div class="card-body">
+                        <h4 class="card-text">R{{ total | currency }}</h4>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="pagamento" class="form-label">Pagamento: </label>
+                    <select class="form-select" aria-label="Pagamento" id="pagamento">
+                        <option selected></option>
+                        <option value="Vista">À Vista</option>
+                        <option value="Cartao">Cartão</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+     <!-- TODO: filtrar produtos -->
+    <table class="table caption-top">
+        <caption>Lista de Produtos</caption>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Plataforma</th>
+                <th scope="col-2">Quantidade</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of produtos; let i = index">
+                <!-- <th scope="row">{{i}}</th> -->
+                <td><img [src]="p?.imageUrl" /></td>
+                <td><a [routerLink]="'' + p?.id">{{p.nome}}</a></td>
+                <td>{{p.descricao}}</td>
+                <td>{{p.plataforma}}</td>
+                <td>
+                    <input type="number" id="quantidade" />
+                </td>
+                <td>
+                    <button *ngIf="!incluido(p);" type="submit" class="btn btn-primary" (click)="incluir(p);"> Incluir
+                    </button>
+                    <button *ngIf="incluido(p);" type="submit" class="btn btn-danger" (click)="excluir(p);"> Excluir
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

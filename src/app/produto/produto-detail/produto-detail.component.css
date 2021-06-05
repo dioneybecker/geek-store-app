@@ -1,0 +1,7 @@
+button{
+    margin: 5px;
+}
+
+.preview-pic img{
+    max-width: 400px;
+}
